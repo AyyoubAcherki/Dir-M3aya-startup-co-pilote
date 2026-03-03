@@ -28,10 +28,10 @@ git commit -m "%msg%"
 
 :: Push with upstream setup if needed
 echo [3/3] Envoi vers GitHub...
-git push -u origin master 2>nul
+git push -u origin main 2>nul
 if %errorlevel% neq 0 (
-    echo [!] Echec de l'envoi vers 'master', tentative vers 'main'...
-    git push -u origin main
+    echo [!] Echec de l'envoi vers 'main', tentative vers 'master'...
+    git push -u origin master
 )
 
 echo.
